@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+
+* {
+  -webkit-transition : all .3s ease-out;
+  -moz-transition    : all .3s ease-out;
+  -ms-transition     : all .3s ease-out;
+  -o-transition      : all .3s ease-out;
+  transition         : all .3s ease-out;
+}
+
+body {
+  background-color       : #304ffe;
+  font-variant-ligatures : common-ligatures;
+  background             : linear-gradient(229deg, #304ffe, #651fff, #00e5ff);
+  background-size        : 600% 600%;
+  -webkit-animation      : poolbgani 14s ease infinite;
+  -moz-animation         : poolbgani 14s ease infinite;
+  -o-animation           : poolbgani 14s ease infinite;
+  animation              : poolbgani 14s ease infinite;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family    : 'Montserrat', sans-serif;
+  letter-spacing : -0.08rem;
+}
+
+h1 {
+  font-size   : 8rem;
+  line-height : 98%;
+}
+
+h2 {
+  font-size   : 6rem;
+  line-height : 98%;
+}
+
+footer {
+  padding : 24px 0;
+}
+
+footer p {
+  display       : inline-block;
+  margin        : 16px 0;
+  min-width     : 170px;
+  font-size     : 1rem;
+  border-radius : 24px;
+  color         : rgba(255, 255, 255, .9);
+  background    : rgba(0, 0, 0, 0.14);
+  padding       : 4px 12px;
+}
+
+.navbar {
+  min-height : 92px;
+}
+
+.navbar-header {
+  min-height : 92px;
+}
+
+.navbar-default {
+  background-color  : transparent;
+  border-color      : transparent;
+  box-shadow        : none;
+  background        : -moz-linear-gradient(top, rgba(48, 79, 254, 1) 0%, rgba(48, 79, 254, 0) 100%); /* FF3.6-15 */
+  background        : -webkit-linear-gradient(top, rgba(48, 79, 254, 1) 0%, rgba(48, 79, 254, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background        : linear-gradient(to bottom, rgba(48, 79, 254, 1) 0%, rgba(48, 79, 254, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter            : progid:DXImageTransform.Microsoft.gradient(startColorstr='#304ffe', endColorstr='#00304ffe', GradientType=0); /* IE6-9 */
+  background-repeat : no-repeat;
+}
+
+.navbar-brand {
+  height      : 92px;
+  padding     : 13px 15px 15px 0;
+  margin-left : 0;
+}
+
+.navbar-toggle {
+  margin-top    : 13px;
+  margin-right  : 15px;
+  margin-bottom : 15px;
+}
+
+.logo {
+  width  : 117px;
+  height : 64px;
+}
+
+.hero-ad {
+  position   : static;
+  display    : block;
+  width      : 100%;
+  height     : auto;
+  min-height : 550px;
+  max-height : 620px;
+  padding    : 15% 0 20% 0;;
+}
+
+.hero-ad-text {
+  text-align : left;
+}
+
+.hero-calltoaction > span {
+  display   : inline-block;
+  font-size : 1.6rem;
+  color     : #fafafa;
+}
+
+.hero-order {
+  display           : block;
+  height            : auto;
+  min-height        : 580px;
+  padding           : 72px 0 48px 0;
+  background-color  : #ffffff;
+  background-image  : url('../img/bg-order.gif');
+  background-size   : cover;
+  background-repeat : no-repeat;
+}
+
+.btn-lg {
+  font-family    : 'Montserrat', sans-serif;
+  font-weight    : 800;
+  text-transform : uppercase;
+  letter-spacing : 1px;
+  height         : 72px;
+  padding        : 22px 36px;
+}
+
+.white-title {
+  color       : #fafafa;
+  text-shadow : 0 7px 12px rgba(0, 0, 0, .1);
+}
+
+.white-subtitle {
+  font-size   : 4rem;
+  font-weight : 300;
+  color       : #fafafa;
+  line-height : 100%;
+}
+
+.btn-white-outline {
+  margin           : 24px;
+  border           : 2px solid #fafafa;
+  color            : #fafafa;
+  border-radius    : 64px;
+  background-color : transparent;
+}
+
+.btn-white-outline:focus,
+.btn-white-outline:hover {
+  background-color : #304ffe;
+  border           : 2px solid #304ffe;
+  color            : #fafafa;
+  outline          : none;
+}
+
+#fade-in {
+  -webkit-animation : fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation    : fadein 2s; /* Firefox < 16 */
+  -ms-animation     : fadein 2s; /* Internet Explorer */
+  -o-animation      : fadein 2s; /* Opera < 12.1 */
+  animation         : fadein 2s;
+}
+
+@-webkit-keyframes poolbgani {
+  0% {
+    background-position : 0% 50%
+  }
+  50% {
+    background-position : 100% 51%
+  }
+  100% {
+    background-position : 0% 50%
+  }
+}
+
+@-moz-keyframes poolbgani {
+  0% {
+    background-position : 0% 50%
+  }
+  50% {
+    background-position : 100% 51%
+  }
+  100% {
+    background-position : 0% 50%
+  }
+}
+
+@-o-keyframes poolbgani {
+  0% {
+    background-position : 0% 50%
+  }
+  50% {
+    background-position : 100% 51%
+  }
+  100% {
+    background-position : 0% 50%
+  }
+}
+
+@keyframes poolbgani {
+  0% {
+    background-position : 0% 50%
+  }
+  50% {
+    background-position : 100% 51%
+  }
+  100% {
+    background-position : 0% 50%
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity : 0;
+  }
+  to {
+    opacity : 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity : 0;
+  }
+  to {
+    opacity : 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity : 0;
+  }
+  to {
+    opacity : 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity : 0;
+  }
+  to {
+    opacity : 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity : 0;
+  }
+  to {
+    opacity : 1;
+  }
+}
+
+@media (min-width : 768px) {
+  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left : 4px;
+  }
+}
+
+@media (max-width : 768px) {
+  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left : 18px;
+  }
+
+  h1 {
+    font-size   : 6rem;
+    line-height : 98%;
+  }
+
+  h2 {
+    font-size   : 6rem;
+    line-height : 98%;
+  }
+
+  .hero-ad {
+    padding    : 50% 0 20% 0;
+    min-height : 600px;
+    max-height : 700px;
+  }
+
+  .hero-calltoaction {
+    display : block;
+    margin  : 24px 0 8px 0;
+  }
+
+  .btn-contact {
+    width     : 100%;
+    max-width : 180px;
+    padding   : 12px 16px;
+    font-size : 1.8rem;
+    margin    : 8px 16px;
+  }
+
+}
+
