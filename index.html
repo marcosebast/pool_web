@@ -6,52 +6,94 @@
     <meta name="description" content="Designer from Argentina. I make things for our world.">
     <meta name="theme-color" content="#d24052">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Pool">
-    <meta property="og:description" content="Designer from Argentina. I make things for our world.">
+    <meta property="og:title" content="Marcos Sebastián Torres · UX Designer">
+    <meta property="og:description" content="UX designer from Argentina. I make things for our world.">
     <meta property="og:url" content="http://madebypool.com">
     <meta property="og:image" content="http://madebypool.com/img/ogbanner.jpg">
     <meta name="keywords" content="ux designer, ui design, ui argentina, ux argentina, web design, startup, startups in argentina, startups latam, ux latam, ux in argentina">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/pooltheme.css">
+    <script src="dribbble.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                <img class="logo" alt="Pool" src="img/pool-logotipo-white-64.svg">
-            </a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-    </div><!-- /.navbar-collapse -->
-</nav>
-<div class="hero-ad">
-    <div class="container">
-        <div class="row">
-            <div id="fade-in" class="col-xs-12 hero-ad-text">
-                <h1 class="white-title">hi!</h1>
-                <p class="white-subtitle">
-                    soon I'll show you my latest projects.<br>stay tune!
-                </p>
-                <div class="hero-calltoaction">
-                    <span>any question?</span>
-                    <a class="btn btn-white-outline btn-contact" href="mailto:marcos@madebypool.com">contact</a>
-                </div>
-            </div>
+<header>
+    <h1>Pool</h1>
+</header>
+<section class="hero-ad">
+    <div class="row">
+        <div class="col-xs-12 hero-ad-text">
+            <h2 class="white-title">Hi! I'm <a href="https://www.linkedin.com/in/marcosebast" target="_blank" title="Linkedin">Marcos Sebastián Torres</a>. If I have to describe me, I say that I'm a UX/UI Designer & music lover.</h2>
         </div>
     </div>
+</section>
+<section class="works">
+    <div class="row title-row">
+        <h2>Lastest shots</h2>
+    </div>
+    <div class="row shots-row">
+        <div id="shots">
+            <script>
+                    // Set the Access Token
+                    var accessToken = 'd5a1eccebaed2519fed8508fcbe7518a6895effa93dacf3d75f698701c494fed';
+                    // Call Dribble v2 API
+                    $.ajax({
+                        url: 'https://api.dribbble.com/v2/user/shots?access_token='+accessToken,
+                        dataType: 'json',
+                        type: 'GET',
+                        success: function(data) {  
+                        if (data.length > 0) { 
+                            $.each(data.reverse(), function(i, val) {                
+                            $('#shots').prepend(
+                                '<a class="shot" target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><div class="shot-image" style="background-image: url('+ val.images.hidpi +')"/><div class="title">' + val.title + '</div></a>'
+                                )
+                            })
+                        }
+                        else {
+                            $('#shots').append('<p>No shots yet!</p>');
+                        }
+                        }
+                    });
+            </script>
+        </div>
+    </div>
+    <div class="row title-row">
+        <h2>Audio mixes</h2>
+    </div>
+    <div class="row audio-row">
+        <ul class="mixes">
+            <li class="item-mixes"><a href="https://open.spotify.com/album/5vRODPWS4ppxsbE4awp0Fo?si=HszYZJzRRf66cE2i3ww28g" target="_blank" class="mix mix-01"><div class="overlay-play"></div></a></li>
+            <li class="item-mixes"><a href="https://open.spotify.com/track/1oeDrnxQ0wdwIFycVRIdeq?si=I3PJLUyYQV62J5F4W816yQ" target="_blank" class="mix mix-02"><div class="overlay-play"></div></a></li>
+            <li class="item-mixes"><a href="https://open.spotify.com/track/3HzTlJajhr4YN3b6atI2HM?si=XFi_qt8STFOZBWql6Pml4Q" target="_blank" class="mix mix-03"><div class="overlay-play"></div></a></li>
+            <li class="item-mixes"><a href="https://open.spotify.com/track/1lC6j79wKxlLDKPebP8cb6?si=OegmRsKTSKCoInK2a54rFw" target="_blank" class="mix mix-04"><div class="overlay-play"></div></a></li>
+        </ul>
+    </div>
+    <div class="row projects-row">
+        <h2>Others projects</h2>
+        <ul class="others-projects">
+            <li class="card-project">
+                <img src="img/discosrobar-logo-white.svg">
+                <p>Discos Robar is a digital label created to push new electronic producers from Argentina. <em>Discos Robar Series</em> introduces first EPs from ROOi (Córdoba), Fruto (Río Negro), Smart Cookie (Buenos Aires) and Baskito (Tierra del Fuego). The full catalogue is available on streaming platforms and free to download from the official site.</p>
+                <a href="https://discosrobar.com" target="_blank" class="card-link">discosrobar.com</a>
+            </li>
+            <li class="card-project">
+                <img src="img/discotequiero-logo-white.svg">
+                <p>Originally as a web-magazine, DiscoTeQuiero was founded among friends from different disciplines as musicians, photographers, djs and designers to talk about de emergent culture from Mendoza and Argentina. Now continues recommended new music in a low budget format on Instagram.</p>
+                <a href="https://discotequiero.com" target="_blank" class="card-link">discotequiero.com</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<div class="social">
+    <div class="row"></div>
 </div>
 <footer>
-    <div class="container">
-        <div class="col-xs-12" style="padding-left: 0; padding-right: 0;">
-            <p>2017 · Hecho con ♥ en Mendoza</p>
-        </div>
+    <div class="row footer-row">
+        <p>2019 · Hecho con ♥ en Mendoza</p>
     </div>
 </footer>
 </body>
