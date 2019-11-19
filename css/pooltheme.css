@@ -540,10 +540,9 @@ footer{
   display: none;
   position: fixed;
   margin: 24px auto;
-  margin-left: calc(50% - 114px);
-  top: unset;
+  right: 9.375%;
+  top: 0;
   bottom: 0;
-  right: auto;
   width: 227px;
   height: 48px;
   padding: 13px 24px;
@@ -684,10 +683,11 @@ footer{
   .bottomMenu {
     display: none;
     position: fixed;
-    margin: 24px;
-    margin-left: calc(9.375% - 114px);
+    margin: 24px auto;
+    margin-left: calc(50% - 114px);
     top: unset;
-    right: initial;
+    bottom: 0;
+    right: auto;
     width: 227px;
     height: 48px;
     padding: 13px 24px;
@@ -700,7 +700,7 @@ footer{
     z-index: 1;
     transition: all .25s ease-in-out;
   }
-
+  
   .row {
     margin-right: 0;
     margin-left: 0;
@@ -846,7 +846,7 @@ footer{
   }
 
   .social > .row {
-    padding: 6rem 9.375% 6rem 9.375%;
+    padding: 6rem 9.375% 8rem 9.375%;
     margin: 0;
   }
 
