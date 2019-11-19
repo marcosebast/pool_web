@@ -34,7 +34,7 @@
 </section>
 <section class="works">
     <div class="row title-row">
-        <h2>Lastest shots</h2>
+        <h2>Latest shots</h2>
     </div>
     <div class="row shots-row">
         <div id="shots">
@@ -74,7 +74,7 @@
         </ul>
     </div>
     <div class="row projects-row">
-        <h2>Others projects</h2>
+        <h2>Other projects</h2>
         <ul class="others-projects">
             <li class="card-project">
                 <img src="img/discosrobar-logo-white.svg">
@@ -113,6 +113,19 @@
             <p>2019 · Hecho en Mendoza</p>
         </div>
     </div>
+    <a class="bottomMenu" href="https://github.com/marcosebast/pool_web" target="_blank">
+        Watch this web on GitHub
+    </a>
 </footer>
 </body>
+<script>
+    $(document).scroll(function() {
+        var y = $(this).scrollTop();
+        if (y > 800) {
+            $('.bottomMenu').fadeIn();
+        } else {
+            $('.bottomMenu').fadeOut();
+        }
+    });
+</script>
 </html>
