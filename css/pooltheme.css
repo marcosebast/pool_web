@@ -177,8 +177,7 @@ header > h1 {
   background-color: rgba(50, 72, 255, 1);
 }
 
-#shots::-webkit-scrollbar-button,
-.mixes:: {
+#shots::-webkit-scrollbar-button {
   width: 8px;
   height: 8px;
 }
