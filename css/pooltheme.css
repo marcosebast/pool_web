@@ -539,9 +539,10 @@ footer{
 .bottomMenu {
   display: none;
   position: fixed;
-  margin: 18px;
-  top: 0;
+  margin: 24px auto;
   right: 9.375%;
+  top: 0;
+  bottom: 0;
   width: 227px;
   height: 48px;
   padding: 13px 24px;
@@ -678,6 +679,28 @@ footer{
 }
 
 @media (max-width : 768px) {
+
+  .bottomMenu {
+    display: none;
+    position: fixed;
+    margin: 24px auto;
+    margin-left: calc(50% - 114px);
+    top: unset;
+    bottom: 0;
+    right: auto;
+    width: 227px;
+    height: 48px;
+    padding: 13px 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #000 !important;
+    background-color: #fafafa;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.08);
+    z-index: 1;
+    transition: all .25s ease-in-out;
+  }
+  
   .row {
     margin-right: 0;
     margin-left: 0;
@@ -823,7 +846,7 @@ footer{
   }
 
   .social > .row {
-    padding: 6rem 9.375% 6rem 9.375%;
+    padding: 6rem 9.375% 8rem 9.375%;
     margin: 0;
   }
 
